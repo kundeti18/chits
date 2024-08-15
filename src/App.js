@@ -1,19 +1,19 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from './login';
 import Home from './home';
+import Register from "./register";
+import Portfolio from "./portfolio";
 
 function Header() {
   return (
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/login"><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <Button size="lg" variant="success"><Link to="/login">Login</Link></Button>&nbsp;&nbsp;
-      </div>
-      </Link>
-      </li>
-    </ul>
+    <div className="App-header">
+      <ul className="nav nav-tabs">
+        <li class="nav-item"><Link to="/">Home</Link></li>
+        <li class="nav-item"><Link to="/login">Login</Link></li>
+      </ul>
+    </div>
   );
 }
 function App() {
@@ -24,14 +24,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/register" element={<Register />}></Route>
+          <Route exact path="/portfolio" element={<Portfolio />}></Route>
+
         </Routes>
       </BrowserRouter>
-      {/* <header className="App-header">
-        <h1 className="logoTitle">{logTitle}</h1>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <Button size="lg" variant="success"><Link to="/login">Login</Link></Button>&nbsp;&nbsp;
-        </div>
-      </header> */}
     </div>
   );
 }

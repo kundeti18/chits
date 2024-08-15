@@ -1,6 +1,5 @@
-.App {
-  text-align: center;
-}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -18,22 +17,36 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.list{
+  list-style-type:none;
+}
+.login-details{
+  align-items: center;
+  justify-content: center;
+
+}
+
+.input{
+  border-radius: 3px;
+}
 
 .logoTitle{
   margin-left: 100px;
 }
+
 .App-button {
   margin-left: 900px;
   margin-top: 15px;
   font-size: 25px;
   margin-bottom: 10px;
 }
+
 .signup-button{
   margin-left: 1300px;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0d0e0e;
 }
 
 @keyframes App-logo-spin {
